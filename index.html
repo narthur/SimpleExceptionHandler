@@ -1,8 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simple Exception Demos</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
 <body>
-<p><a href="functions/throwStandardException.php">Throw standard exception</a></p>
-<p><a href="functions/throwCustomException.php">Throw custom exception</a></p>
-<p><a href="log.txt">View logs</a></p>
-<p><a href="functions/clearLogs.php">Clear logs</a></p>
+<div class="wrapper">
+    <!-- header-->
+    <header class="">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Simple Exception Demo</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main section-->
+    <section>
+        <!-- Page content-->
+        <div class="content-wrapper">
+            <div class="jumbotron">
+                <h1>Exception Handling Demo</h1>
+                <p>There are several ways to call, view, and clear exception logging from this form.</p>
+                <div class="row">
+                    <div class="col-sm-6" ><button type="button" id="trigger_exception_standard" class="btn btn-info btn-block">Throw a standard exception</button></div>
+                    <div class="col-sm-6" ><button type="button" id="trigger_exception_custom" class="btn btn-info btn-block">Throw a custom exception</button></div>
+                </div>
+                <iframe id="log_frame" src="log.txt"></iframe>
+                <div class="col-sm-4" ><button type="button" id="trigger_exception_clear" class="btn btn-link">Clear log</button></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
